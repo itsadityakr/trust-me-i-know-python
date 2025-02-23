@@ -1,19 +1,10 @@
-# Python While Loop - Complete Guide for Absolute Beginners
+# Python While Loop - Complete Guide
 
-# What is a While Loop?
-# - A `while` loop allows repeating a block of code as long as a condition is True.
-# - The condition is checked before each iteration.
-# - If the condition is False initially, the loop will not run.
-
-# Syntax:
-# while condition:
-#     # Code to execute repeatedly
-
-# Example 1: Basic While Loop
-count = 1  # Initialize counter
-while count <= 5:  # Condition
+# 1. **Basic While Loop**
+count = 1
+while count <= 5:
     print("Count:", count)
-    count += 1  # Increment counter
+    count += 1
 
 # Output:
 # Count: 1
@@ -23,37 +14,25 @@ while count <= 5:  # Condition
 # Count: 5
 
 
-# 1. Infinite Loop (Avoid Mistakes)
-# - If the condition always remains True, the loop runs forever.
-# - To stop, use Ctrl + C in the terminal or `break` inside the loop.
+# 2. **Avoiding Infinite Loops**
+# Be careful! If the condition always remains True, the loop runs forever.
 
-# Example 2: Infinite Loop (Warning: Do not run)
 # while True:
-#     print("This is an infinite loop")  # Runs forever
+#     print("This is an infinite loop")  # Warning: Runs forever
 
 
-# 2. Using `break` to Stop a Loop
-# - `break` immediately stops the loop, even if the condition is still True.
-
-print("Using break:")
+# 3. **Using `break` to Stop a Loop**
 num = 1
 while num <= 10:
     if num == 5:
-        break  # Exit the loop when num is 5
+        break  # Exit loop when num is 5
     print(num)
     num += 1
 
-# Output:
-# 1
-# 2
-# 3
-# 4
+# Output: 1, 2, 3, 4
 
 
-# 3. Using `continue` to Skip Iteration
-# - `continue` skips the rest of the code for the current iteration and goes to the next one.
-
-print("Using continue:")
+# 4. **Using `continue` to Skip an Iteration**
 num = 0
 while num < 5:
     num += 1
@@ -61,17 +40,10 @@ while num < 5:
         continue  # Skip printing 3
     print(num)
 
-# Output:
-# 1
-# 2
-# 4
-# 5
+# Output: 1, 2, 4, 5
 
 
-# 4. Using `else` with While Loop
-# - The `else` block runs if the loop exits normally (without `break`).
-
-print("Using else:")
+# 5. **Using `else` with While Loop**
 num = 1
 while num <= 3:
     print(num)
@@ -80,44 +52,28 @@ else:
     print("Loop finished!")  # Runs when loop ends normally
 
 # Output:
-# 1
-# 2
-# 3
+# 1, 2, 3
 # Loop finished!
 
 
-# 5. Using a While Loop with User Input
-# - Useful for interactive programs.
-
-print("Using while loop for user input:")
+# 6. **User Input While Loop**
 while True:
     user_input = input("Enter 'exit' to stop: ")
     if user_input.lower() == "exit":
-        break  # Stop the loop
+        break
     print("You entered:", user_input)
 
 
-# 6. While Loop with a Counter
-# - Common use case for counting iterations.
-
-print("Counting with while loop:")
+# 7. **Counter-Based While Loop**
 counter = 10
 while counter > 0:
     print("Counter:", counter)
-    counter -= 2  # Decrease by 2 each time
+    counter -= 2  # Decrease by 2
 
-# Output:
-# Counter: 10
-# Counter: 8
-# Counter: 6
-# Counter: 4
-# Counter: 2
+# Output: 10, 8, 6, 4, 2
 
 
-# 7. Nested While Loop
-# - A while loop inside another while loop.
-
-print("Nested while loop:")
+# 8. **Nested While Loop**
 i = 1
 while i <= 3:
     j = 1
@@ -135,7 +91,7 @@ while i <= 3:
 # i=3, j=2
 
 
-# 8. Using While Loop for Number Guessing Game
+# 9. **Number Guessing Game (Practical Example)**
 import random
 
 secret_number = random.randint(1, 10)
@@ -152,19 +108,16 @@ while True:
     else:
         print("Too high, try again.")
 
-# This program asks the user to guess a random number until they get it right.
 
-
-# Summary of While Loops:
+# **Summary of While Loops**
 """
-1. Basic while loop: Runs while condition is True.
-2. Infinite loop: Runs forever if condition never changes.
-3. `break`: Exits the loop immediately.
-4. `continue`: Skips the rest of the iteration and starts the next one.
-5. `else`: Runs when the loop exits normally.
-6. User input while loop: Repeats until user decides to stop.
-7. Counter-based while loop: Common in counting programs.
-8. Nested while loop: A loop inside another loop.
-9. Practical example: Number guessing game.
+1. **Basic while loop** - Runs while condition is True.  
+2. **Infinite loop** - Runs forever if the condition never changes.  
+3. **`break`** - Exits the loop immediately.  
+4. **`continue`** - Skips the current iteration.  
+5. **`else`** - Runs when the loop ends normally.  
+6. **User input loop** - Useful for interactive programs.  
+7. **Counter-based loop** - Common in counting programs.  
+8. **Nested while loop** - A loop inside another loop.  
+9. **Practical example** - Number guessing game.  
 """
-
