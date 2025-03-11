@@ -3,7 +3,6 @@
 # Dictionary
 
 ---
-
 ## **1. Creating a Dictionary (Empty and With Values)**
 A dictionary in Python is an unordered, mutable collection of key-value pairs. You can create it using curly braces `{}` or the `dict()` function.
 
